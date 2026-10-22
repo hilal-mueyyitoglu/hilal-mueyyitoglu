@@ -56,6 +56,7 @@ Independent learning project demonstrating POST create/update, GET lookup, CSV p
 ## 📜 Learning & Certification
 
 - **[Microsoft Junior QA/Software Tester Professional Certificate](https://www.coursera.org/account/accomplishments/professional-cert/certificate/ECP2J0HDJUQY)** — Coursera, October 2026.
+- **Foundations of Software Testing and Validation** — University of Leeds (via Coursera), completed October 2026.
 - **Apply Postman APIs for Customer Data Management** — EDUCBA (via Coursera), completed October 2026.
 - **Apply API Testing & Automation with Postman** — Coursera course, completed October 2026.
 - **ISTQB Certified Tester Foundation Level (CTFL)** — currently preparing for the exam; **not yet certified**.
