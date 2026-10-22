@@ -8,7 +8,7 @@ I have completed the **Microsoft Junior QA/Software Tester Professional Certific
 
 ## 🔎 Featured QA Projects
 
-### 🛒 [GreenLeaf Grocers — Software QA Portfolio](https://github.com/Hilalmuey/greenleaf-grocers-qa-portfolio)
+### 🛒 [GreenLeaf Grocers — Software QA Portfolio](https://github.com/hilal-mueyyitoglu/greenleaf-grocers-qa-portfolio)
 E-commerce checkout testing in a simulated learning environment.
 - Designed **3 manual checkout test cases** and documented **2 reported defects**.
 - Built a Playwright/JavaScript guest-checkout test; **1/1 test passed** in the course lab.
@@ -17,7 +17,7 @@ E-commerce checkout testing in a simulated learning environment.
 
 **Tools & techniques:** Playwright, JavaScript, SQL, SQLite, API response inspection, test design, defect documentation.
 
-### 🎓 [MindBridge Education — QA Automation Portfolio](https://github.com/Hilalmuey/mindbridge-education-qa-portfolio)
+### 🎓 [MindBridge Education — QA Automation Portfolio](https://github.com/hilal-mueyyitoglu/mindbridge-education-qa-portfolio)
 Education-platform QA exercises conducted in a locally simulated lab.
 - Developed and executed a Playwright **Account Update** happy-path check.
 - Validated a test user's database record using **SQL**.
@@ -25,6 +25,15 @@ Education-platform QA exercises conducted in a locally simulated lab.
 - Analyzed simulated nightly pipeline results and release risks.
 
 **Tools & techniques:** Playwright, JavaScript, SQL, manual testing, test evidence, QA reporting.
+
+### 🧪 [MindBridge — API & Performance QA Portfolio](https://github.com/hilal-mueyyitoglu/mindbridge-api-performance-qa)
+Postman API contract testing and JMeter performance test design in a simulated local lab.
+- Recreated two API scenarios: a successful GET (HTTP 200) and an invalid registration POST (HTTP 400).
+- Added reusable Postman scripts with four checks across both requests.
+- Developed a JMeter scenario with **10 virtual users, 1-second ramp-up and 10 loops**.
+- Documented the **p95 < 2,000 ms** SLO and risk assessment. Original run exports are unavailable, so no verified observed latency is claimed.
+
+**Tools & techniques:** Postman, REST API, negative testing, JavaScript assertions, Apache JMeter, performance SLOs.
 
 > **Project context:** These repositories document hands-on training and simulated QA workflows, not commercial production-testing engagements.
 
@@ -44,4 +53,4 @@ Education-platform QA exercises conducted in a locally simulated lab.
 ## 📫 Connect
 
 - [LinkedIn — Hilal Müeyyitoğlu](https://www.linkedin.com/in/hilal-mueyyitoglu/)
-- [View all GitHub repositories](https://github.com/Hilalmuey?tab=repositories)
+- [View all GitHub repositories](https://github.com/hilal-mueyyitoglu?tab=repositories)
