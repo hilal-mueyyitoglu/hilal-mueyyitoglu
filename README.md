@@ -37,11 +37,19 @@ Postman API contract testing and JMeter performance test design in a simulated l
 
 > **Project context:** These repositories document hands-on training and simulated QA workflows, not commercial production-testing engagements.
 
+### 🧾 [Customer CSV API — Flask & Postman QA Practice](projects/flask-customer-api-qa/README.md)
+Independent learning project demonstrating POST create/update, GET lookup, CSV persistence, and test-design coverage.
+- Built a small Flask/pandas reference API and a **5-request Postman collection** with positive and negative assertions.
+- Designed **11 API test scenarios**, including boundary values, missing fields, and duplicate-prevention checks.
+- **6 Python storage tests passed locally** (22 October 2026). Flask HTTP and Postman execution are **not yet verified**; see the project README.
+
+**Tools & techniques:** Python, Flask, pandas, Postman, JSON, unittest, boundary value analysis, API validation.
+
 ## 🛠️ Skills
 
 **Software QA:** Manual Testing · Test Case Design · Functional Testing · Regression Testing · Exploratory Testing · Defect Reporting · Test Documentation
 
-**Tools & data:** Playwright · JavaScript · SQL · SQLite · API/HTTP Validation · Git · GitHub
+**Tools & data:** Postman · REST API · JSON · Python · Flask · pandas · Playwright · JavaScript · SQL · SQLite · Git · GitHub
 
 **Quality engineering:** Root Cause Analysis · 8D · CAPA · Risk Assessment · SAP QM · Quality Management Systems
 
