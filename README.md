@@ -54,3 +54,15 @@ Postman API contract testing and JMeter performance test design in a simulated l
 
 - [LinkedIn — Hilal Müeyyitoğlu](https://www.linkedin.com/in/hilal-mueyyitoglu/)
 - [View all GitHub repositories](https://github.com/hilal-mueyyitoglu?tab=repositories)
+
+## API Testing Projects
+
+### Postman API Testing Portfolio
+
+Hands-on API testing project using Postman, REST APIs, JSON, and JavaScript assertions.
+
+- Designed and executed 3 API requests (GET and POST).
+- Implemented 5 automated checks covering HTTP status codes, response data validation, and invalid-input echo behavior.
+- Achieved 5 passed checks in the documented test execution.
+
+**[View Postman API Testing Project](https://github.com/hilal-mueyyitoglu/hilal-mueyyitoglu/tree/main/projects/postman-api-testing)**
