@@ -1,0 +1,140 @@
+{
+  "info": {
+    "name": "Customer CSV API — QA Practice",
+    "description": "Portfolio collection (not yet executed against live Flask). Run in order against clean CSV.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:5000"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 Create customer",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/add_customer",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"customer_id\":101,\"product_id\":500,\"product_type\":\"shirt\",\"rating\":10}"
+        },
+        "description": "First run only: if the record already exists, correct result is 200 update. Clear demo CSV before running."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('201 created',()=>pm.response.to.have.status(201));",
+              "pm.test('action created',()=>pm.expect(pm.response.json().action).to.eql('created'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 Read customer",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/customers/101"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('200 OK',()=>pm.response.to.have.status(200));",
+              "pm.test('records returned',()=>pm.expect(pm.response.json().records.length).to.be.above(0));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 Update rating",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/add_customer",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"customer_id\":101,\"product_id\":500,\"product_type\":\"shirt\",\"rating\":3}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('200 updated',()=>pm.response.to.have.status(200));",
+              "pm.test('rating is 3',()=>pm.expect(pm.response.json().customer.rating).to.eql(3));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 Invalid rating 11",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/add_customer",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"customer_id\":102,\"product_id\":501,\"product_type\":\"jacket\",\"rating\":11}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('400 invalid',()=>pm.response.to.have.status(400));",
+              "pm.test('error message',()=>pm.expect(pm.response.json().error).to.be.a('string'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 Unknown customer",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/customers/999999"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('404 not found',()=>pm.response.to.have.status(404));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
